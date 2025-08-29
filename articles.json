@@ -1,0 +1,26 @@
+[
+    {
+        "id": "mi-primera-publicacion",
+        "title": "Mi Primera Publicación: Un Camino de Baile",
+        "date": "28 de agosto de 2025",
+        "image": "images/mi-primera-publicacion.jpg",
+        "summary": "¡Hola a todos y bienvenidos a mi blog! Este es el primer paso en un emocionante viaje que quiero compartir con ustedes. Desde hace años, la danza caribeña ha sido más que un hobby para mí; ha sido una pasión, una forma de expresión y una fuente de alegría.",
+        "content": "<p>¡Hola a todos y bienvenidos a mi blog! Este es el primer paso en un emocionante viaje que quiero compartir con ustedes. Desde hace años, la danza caribeña ha sido más que un hobby para mí; ha sido una pasión, una forma de expresión y una fuente de alegría. Con este blog, espero poder transmitirles un poco de esa energía y el conocimiento que he acumulado en este hermoso arte.</p><p>En este primer post, quiero invitarlos a unirse a esta comunidad. Aquí encontrarán tutoriales, consejos, reseñas de eventos y, por supuesto, mucha inspiración para moverse al ritmo del Caribe. No importa si eres un principiante que nunca ha tomado una clase o un bailarín experimentado, este es tu espacio.</p><h3>El Origen de Caribeean Dance</h3><p>El nombre del blog no es casualidad. Nació de mi deseo de fusionar la rica cultura caribeña con mi amor por la danza. Cada paso, cada giro, tiene una historia detrás, y mi objetivo es explorar y compartir esas historias con ustedes. Desde la salsa y el merengue hasta el calipso y la bachata, cada género tiene un alma única.</p><p>¡Gracias por acompañarme en esta aventura! No olvides suscribirte para no perderte ninguna publicación y, si te gusta lo que ves, déjame un comentario abajo. ¡A bailar!</p>"
+    },
+    {
+        "id": "segunda-publicacion",
+        "title": "Ritmos de Verano: Bailando Merengue y Bachata",
+        "date": "5 de septiembre de 2025",
+        "image": "images/image2.jpg",
+        "summary": "El verano es la temporada perfecta para aprender nuevos ritmos. En esta publicación, exploraremos las diferencias clave entre el merengue y la bachata, dos pilares de la música latina. ¡Prepárate para mover los pies!",
+        "content": "<p>El verano es la temporada perfecta para aprender nuevos ritmos. En esta publicación, exploraremos las diferencias clave entre el merengue y la bachata, dos pilares de la música latina. Prepárate para mover los pies!</p><p>El merengue, originario de la República Dominicana, es conocido por su ritmo rápido y su movimiento de cadera distintivo. Es perfecto para fiestas y celebraciones. La bachata, también dominicana, es más lenta y sensual, con un enfoque en la conexión entre los bailarines.</p>"
+    },
+    {
+        "id": "segunda-publicacion",
+        "title": "Ritmos de Verano: Bailando Merengue y Bachata",
+        "date": "5 de septiembre de 2025",
+        "image": "images/image2.jpg",
+        "summary": "El verano es la temporada perfecta para aprender nuevos ritmos. En esta publicación, exploraremos las diferencias clave entre el merengue y la bachata, dos pilares de la música latina. ¡Prepárate para mover los pies!",
+        "content": "<p>El verano es la temporada perfecta para aprender nuevos ritmos. En esta publicación, exploraremos las diferencias clave entre el merengue y la bachata, dos pilares de la música latina. Prepárate para mover los pies!</p><p>El merengue, originario de la República Dominicana, es conocido por su ritmo rápido y su movimiento de cadera distintivo. Es perfecto para fiestas y celebraciones. La bachata, también dominicana, es más lenta y sensual, con un enfoque en la conexión entre los bailarines.</p>"
+    }
+]

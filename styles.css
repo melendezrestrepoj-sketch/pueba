@@ -1,0 +1,582 @@
+/* ============================================== */
+/* Estilos Generales y del Cuerpo (body) */
+/* ============================================== */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    color: #f0f8ff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* ============================================== */
+/* Estilos del Encabezado y Navegación */
+/* ============================================== */
+.header {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: 3px solid #ffde00;
+    position: relative;
+}
+
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+.logo-container img {
+    width: 190px;
+    height: auto;
+    border-radius: 30%;
+}
+
+.navbar {
+    background-color: #0d0d0d;
+    padding: 1rem 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #ffde00;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffde00;
+}
+
+.navbar a.active {
+    color: #ffffff;
+    border-bottom: 2px solid #ffde00;
+    padding-bottom: 5px;
+}
+
+/* ============================================== */
+/* Estilos del Contenido Principal y la Barra Lateral */
+/* ============================================== */
+.main-content-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.main-content {
+    flex: 3;
+    min-width: 0;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar .widget {
+    margin-bottom: 25px;
+}
+
+.sidebar h3 {
+    color: #ffde00;
+    border-bottom: 2px solid #ffde00;
+    padding-bottom: 5px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    color: #f0f8ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #ffde00;
+}
+
+/* ============================================== */
+/* Estilos de las Publicaciones y Formularios */
+/* ============================================== */
+.blog-post {
+    background-color: #1a1a1a;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #ffde00;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2, h3 {
+    color: #ffde00;
+}
+
+.date {
+    font-style: italic;
+    color: #b0c4de;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.page-content {
+    margin-bottom: 30px; /* **MODIFICADO**: Añade espacio después del contenido de la página */
+}
+
+/* Espacio antes y después de la galería */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* **MODIFICADO**: Aumentado el espacio entre las imágenes */
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px; /* **AÑADIDO**: Altura fija para que todas se vean uniformes */
+    object-fit: cover; /* **AÑADIDO**: Asegura que las imágenes no se distorsionen */
+    display: block;
+}
+
+/* Espacio antes y después del formulario de contacto */
+.contact-form-section {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    border-right: 5px solid #ffde00;
+    margin-top: 50px; /* **MODIFICADO**: Gran espacio para separarlo de la galería */
+    margin-bottom: 30px; /* **MODIFICADO**: Espacio antes del footer */
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 10px;
+    color: #ffde00;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: #333333;
+    border: 1px solid #555555;
+    border-radius: 4px;
+    color: #f0f8ff;
+}
+
+.contact-form button {
+    background-color: #ffde00;
+    color: #000000;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form button:hover {
+    background-color: #ffc200;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 222, 0, 0.4);
+}
+
+/* Estilo para los mensajes de estado de los formularios */
+.form-status {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ffde00;
+    text-align: center;
+}
+
+
+/* ============================================== */
+/* Estilos para Reacciones y Comentarios */
+/* ============================================== */
+.post-actions {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.reactions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.reaction-btn {
+    background-color: #333;
+    color: #f0f8ff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.reaction-btn:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.comments-section h3 {
+    border-bottom: 2px solid #ffde00;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.comment-author {
+    font-weight: bold;
+    color: #ffde00;
+    margin-bottom: 5px;
+}
+
+.comment-form button {
+    background-color: #ffde00;
+    color: #000000;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.comment-form button:hover {
+    background-color: #ffc200;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 222, 0, 0.4);
+}
+
+.comment-list {
+    margin-bottom: 20px;
+}
+
+.comment {
+    background-color: #2a2a2a;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.comment-form textarea {
+    width: 100%;
+    background-color: #333;
+    border: 1px solid #555;
+    color: #f0f8ff;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* ============================================== */
+/* Estilos del Pie de Página (Footer) */
+/* ============================================== */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #111111;
+    color: #888888;
+    margin-top: 20px;
+}
+
+/* ============================================== */
+/* Estilos Responsivos (Media Queries) */
+/* ============================================== */
+/* Reglas para pantallas de hasta 768px (tabletas) */
+@media screen and (max-width: 768px) {
+    .main-content-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .header {
+        padding: 1.5rem 0;
+    }
+    .header h1 {
+        font-size: 2rem;
+    }
+    .logo-container {
+        position: static;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .logo-container img {
+        width: 80px;
+    }
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* Reglas para pantallas de hasta 480px (teléfonos móviles) */
+@media screen and (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    .navbar a {
+        font-size: 0.9rem;
+    }
+    .blog-post, .contact-form-section, .sidebar, .gallery-container {
+        padding: 15px;
+    }
+}
+
+/* ============================================== */
+/* Estilos para el Modo Claro */
+/* ============================================== */
+body.light-theme {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+body.light-theme .header,
+body.light-theme .navbar {
+    background-color: #ffffff;
+}
+
+body.light-theme .header {
+    border-bottom-color: #007bff;
+}
+
+body.light-theme .navbar a {
+    color: #007bff;
+}
+
+body.light-theme .navbar a:hover,
+body.light-theme .navbar a.active {
+    color: #0056b3;
+    border-bottom-color: #0056b3;
+}
+
+body.light-theme .blog-post,
+body.light-theme .contact-form-section,
+body.light-theme .sidebar,
+body.light-theme .gallery-container,
+body.light-theme .newsletter-form-section {
+    background-color: #f5f5f5;
+}
+
+body.light-theme .blog-post {
+    border-left-color: #007bff;
+}
+
+body.light-theme .contact-form-section,
+body.light-theme .newsletter-form-section {
+    border-right-color: #007bff;
+}
+
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3 {
+    color: #007bff;
+}
+
+body.light-theme .contact-form label,
+body.light-theme .comment-author {
+    color: #007bff;
+}
+
+body.light-theme .contact-form input,
+body.light-theme .contact-form textarea,
+body.light-theme .comment-form textarea,
+body.light-theme .newsletter-form input {
+    background-color: #ffffff;
+    border-color: #cccccc;
+    color: #333333;
+}
+
+body.light-theme .contact-form button,
+body.light-theme .comment-form button,
+body.light-theme .reaction-btn,
+body.light-theme .newsletter-form button {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+body.light-theme .contact-form button:hover,
+body.light-theme .comment-form button:hover,
+body.light-theme .newsletter-form button:hover {
+    background-color: #0056b3;
+}
+
+body.light-theme .reaction-btn {
+    border-color: #dddddd;
+}
+
+body.light-theme .reaction-btn:hover {
+    background-color: #dddddd;
+}
+
+body.light-theme .sidebar a,
+body.light-theme .sidebar li {
+    color: #333333;
+}
+
+body.light-theme .sidebar a:hover {
+    color: #007bff;
+}
+
+body.light-theme .footer {
+    background-color: #eeeeee;
+    color: #555555;
+}
+
+.theme-toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #1a1a1a;
+    color: #f0f8ff;
+    border: 1px solid #555555;
+}
+
+body.light-theme .theme-toggle-btn {
+    background-color: #f5f5f5;
+    color: #333333;
+    border: 1px solid #cccccc;
+}
+
+/* Formulario de Suscripción */
+.newsletter-form-section {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    border-right: 5px solid #ffde00;
+    margin-top: 20px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.newsletter-form label {
+    margin-top: 10px;
+    color: #ffde00;
+}
+
+.newsletter-form input {
+    padding: 10px;
+    background-color: #333333;
+    border: 1px solid #555555;
+    border-radius: 4px;
+    color: #f0f8ff;
+    margin-top: 5px;
+}
+
+.newsletter-form button {
+    background-color: #ffde00;
+    color: #000000;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #ffc200;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 222, 0, 0.4);
+}

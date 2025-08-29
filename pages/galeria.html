@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Caribeean Dance</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <button id="theme-toggle" class="theme-toggle-btn">Cambiar Tema</button>
+
+    <header class="header">
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="../logo de Caribeean dance.jpg" alt="Logo de Caribbean Dance">
+            </a>
+        </div>
+        
+        <h1>Caribeean Dance</h1>
+        <p>Un espacio para compartir mis ideas y proyectos.</p>
+        
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Blog</a></li>
+                <li><a href="acerca-de.html">Acerca de</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="tutoriales.html">Tutoriales</a></li>
+                <li><a href="galeria.html" class="active">Galería</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content-container">
+        <div class="main-content">
+           <section class="page-content">
+                <h2>Nuestra Galería de Baile</h2>
+                <p>Echa un vistazo a algunos de los momentos más memorables de nuestras clases y eventos.</p>
+                
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="../images/mi-primera-publicacion.jpg" alt="Bailarines de salsa">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/image2.jpg" alt="Pareja bailando bachata">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/image3.jpg" alt="Clase de merengue">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../images/image4.jpg" alt="Grupo de baile caribeño">
+                    </div>
+                </div>
+            </section>
+            
+            <section class="contact-form-section" id="contact-form-section">
+                <h2>Contáctame</h2>
+                <form id="contact-form" class="contact-form" method="POST" action="https://formspree.io/f/mqadekav">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+                <div id="contact-status" class="form-status"></div>
+            </section>
+        </div>
+
+        <aside class="sidebar">
+            <section class="widget">
+                <h3>Acerca de Mí</h3>
+                <p>¡Hola! Soy el autor de este blog. Me apasiona la tecnología, el desarrollo web y compartir mis conocimientos contigo. Espero que disfrutes del contenido.</p>
+            </section>
+            <section class="widget">
+                <h3>Últimas Publicaciones</h3>
+                <ul>
+                    <li><a href="mi-primer-articulo.html?id=mi-primera-publicacion">Mi Primera Publicación</a></li>
+                    <li><a href="mi-primer-articulo.html?id=segunda-publicacion">Ritmos de Verano</a></li>
+                </ul>
+            </section>
+            <section class="widget">
+                <h3>Categorías</h3>
+                <ul>
+                    <li><a href="#">Tutoriales</a></li>
+                    <li><a href="#">Reseñas</a></li>
+                    <li><a href="#">Proyectos</a></li>
+                </ul>
+            </section>
+            <section class="widget">
+                <h3>Eventos Próximos</h3>
+                <ul>
+                    <li><a href="#">Charla de Programación (10/10/25)</a></li>
+                    <li><a href="#">Taller de CSS (25/10/25)</a></li>
+                </ul>
+            </section>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Mi Blog Increíble. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Script para el Botón de Cambio de Tema
+            const toggleBtn = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                body.classList.add(savedTheme);
+            }
+
+            toggleBtn.addEventListener('click', () => {
+                body.classList.toggle('light-theme');
+                
+                if (body.classList.contains('light-theme')) {
+                    localStorage.setItem('theme', 'light-theme');
+                } else {
+                    localStorage.removeItem('theme');
+                }
+            });
+
+            // Script para el formulario de contacto
+            const contactForm = document.getElementById('contact-form');
+            const contactStatus = document.getElementById('contact-status');
+            
+            contactForm.addEventListener("submit", function(event) {
+                event.preventDefault();
+                contactStatus.textContent = "Enviando...";
+                const data = new FormData(contactForm);
+                
+                fetch(contactForm.action, {
+                    method: contactForm.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        contactStatus.textContent = "¡Mensaje enviado!";
+                        contactForm.reset();
+                    } else {
+                        response.json().then(data => {
+                            if (Object.hasOwn(data, 'errors')) {
+                                contactStatus.textContent = data["errors"].map(error => error["message"]).join(", ");
+                            } else {
+                                contactStatus.textContent = "¡Hubo un error al enviar el mensaje!";
+                            }
+                        })
+                    }
+                }).catch(error => {
+                    contactStatus.textContent = "¡Hubo un error al enviar el mensaje!";
+                });
+            });
+        });
+    </script>
+</body>
+</html>
